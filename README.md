@@ -1,13 +1,12 @@
-# HMDb
- a movie db website build using angular.
+
 
 ## Description
 
-an IMDB clone which uses themoviesdb's api to get movie/series data. It is build using angular 14.
+An IMDB clone which uses themoviesdb's api to get movie/series data. It is build using angular 14.
 
 ## Demo
  
-  * This app is deployed on Heroku. Please check it out :smile: https://het-delwadiya.github.io/HMDb/.
+  * This app is deployed on github pages. Please check it out :smile: https://het-delwadiya.github.io/HMDb/.
 
 
 ## Install
