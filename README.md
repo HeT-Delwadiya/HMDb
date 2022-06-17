@@ -14,7 +14,7 @@ An IMDB clone which uses themoviesdb's api to get movie/series data. It is build
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/HeT-Delwadiya/Devs-Den-Socket-Server.git
+$ git clone https://github.com/HeT-Delwadiya/HMDb.git
 $ cd project
 $ npm install
 ```
