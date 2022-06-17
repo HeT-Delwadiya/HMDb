@@ -1,0 +1,17 @@
+<ng-container *ngIf="itemData">
+       <a class="item shadow-md" [routerLink]="isTvShow ? '/tv-show/'+itemData.id : '/movie/'+itemData.id">
+              <div class="item-rating" *ngIf="itemData.vote_average">
+                     <i class="app-icon"><i class="fa-solid fa-star"></i></i>
+                     <span>{{ itemData.vote_average | number: '1.1-1' }}</span
+                     >/10
+              </div>
+              <div class="item-image">
+                     <img
+                            [src]="isImageAvailable()"
+                            [alt]="itemData.title"
+                     />
+                     <!-- w342 -->
+              </div>
+              <!-- <div class="item-title">{{ itemData.title }}</div> -->
+       </a>
+</ng-container>

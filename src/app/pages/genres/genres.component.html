@@ -1,0 +1,22 @@
+<div class="container">
+       <div class="dark-bg text-white px-2 my-5 text-center rounded-3"><span class="fs-2 text-center">Movies Genres</span></div>
+       <div class="grid">
+              <div *ngFor="let genre of movieGenres" class="col-12 md:col-6 lg:col-4">
+                     <a
+                            class="genre-link rounded-3 px-2 text-wrap text-center"
+                            [routerLink]="'/movies/genres/' + genre.id"
+                            >{{ genre.name }}</a
+                     >
+              </div>
+       </div>
+       <div class="dark-bg text-white px-2 my-5 text-center rounded-3"><span class="fs-2 text-center">Tv Show Genres</span></div>
+       <div class="grid mb-5">
+              <div *ngFor="let genre of tvShowGenres" class="col-12 md:col-6 lg:col-4">
+                     <a
+                            class="genre-link rounded-3 px-2 text-wrap text-center"
+                            [routerLink]="'/tv-shows/genres/' + genre.id"
+                            >{{ genre.name }}</a
+                     >
+              </div>
+       </div>
+</div>

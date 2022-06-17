@@ -1,0 +1,26 @@
+<ng-container *ngIf="tvshow">
+       <app-slider [items]="[tvshow]" [isBanner]="true" [isTvShow]="true"></app-slider>
+       <p-tabView>
+              <p-tabPanel header="Overview">
+                     <app-item-overview [movie]="tvshow" [isTvShow]="true"></app-item-overview>
+              </p-tabPanel>
+              <p-tabPanel header="Trailers">
+                     <div class="container">
+                            <div class="grid">
+                                   <ng-container *ngFor="let tvshowVideo of tvshowVideos">
+                                          <div class="col-12 md:col-4 lg:col-4">
+                                                 <app-embeded-video [key]="tvshowVideo.key" [site]="tvshowVideo.site"></app-embeded-video>
+                                          </div>
+                                   </ng-container>
+                            </div>
+                     </div>
+              </p-tabPanel>
+              <p-tabPanel header="Gallery">
+                     <app-item-gallery [itemGallery]="tvshowImages?.backdrops"></app-item-gallery>
+              </p-tabPanel>
+              <p-tabPanel header="Cast">
+                     <app-item-cast [cast]="tvshowCredits"></app-item-cast>
+              </p-tabPanel>
+       </p-tabView>
+       <app-card-list [items]="similarTvshow" [title]="'Similar TV Shows'" [isTvShow]="true"></app-card-list>
+</ng-container>

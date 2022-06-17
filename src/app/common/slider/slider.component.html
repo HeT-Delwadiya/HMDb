@@ -1,0 +1,40 @@
+<div class="slider mt-0">
+       <ng-container *ngFor="let item of items; let i = index">
+              <div class="slide" *ngIf="i == currentSlideIndex" @slideFade>
+                     <div class="slide-bg">
+                            <img
+                                   class="slide-bg-image"
+                                   [src]="
+                                          'https://image.tmdb.org/t/p/original' +
+                                          item.backdrop_path
+                                   "
+                                   alt="movie-banner"
+                            />
+                     </div>
+                     <div class="slide-pane">
+                            <h2 class="name">{{ isTvShow ? item.name : item.title }}</h2>
+                            <div class="meta">
+                                   <div class="info">
+                                          <span class="rating" *ngIf="item.vote_average">
+                                                 <span class="app-icon"
+                                                        ><i class="fa-solid fa-star"></i></span
+                                                 ><span class="rating-value">{{
+                                                        item.vote_average
+                                                 }}</span
+                                                 ><span class="ms-1">/ 10</span>
+                                          </span>
+                                          <span *ngIf="item.vote_count">{{ item.vote_count }} votes</span>
+                                          <span>{{
+                                                 isTvShow ? (item.first_air_date | date: "yyyy") : (item.release_date
+                                                        | date: "yyyy")
+                                          }}</span>
+                                   </div>
+                            </div>
+                            <div class="desc mt-6">
+                                   {{ item.overview }}
+                            </div>
+                     </div>
+              </div>
+       </ng-container>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container mb-5 mt-5">
+       <form class="d-flex mb-5" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search" #searchText>
+              <button class="btn btn-outline-primary" (click)="handleSearch(searchText.value)">Search</button>
+       </form>
+      
+       <div class="grid">
+              <div class="col-12 md:col-6 lg:col-3" *ngFor="let tvshow of tvshows">
+                     <app-item-card [itemData]="tvshow" [isTvShow]="true"></app-item-card>
+              </div>
+       </div>
+</div>
+
+<p-paginator [rows]="20" [totalRecords]="totalRecords" (onPageChange)="handlePageChange($event)" #paginator></p-paginator>

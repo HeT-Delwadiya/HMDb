@@ -1,0 +1,17 @@
+<div class="container">
+       <div class="grid">
+              <ng-container *ngFor="let movieImage of itemGallery">
+                     <div class="col-12 md:col-4 lg:col-4">
+                            <p-image
+                                   [src]="
+                                          'https://image.tmdb.org/t/p/original' +
+                                          movieImage.file_path
+                                   "
+                                   alt="Image"
+                                   width="100%"
+                                   [preview]="true"
+                            ></p-image>
+                     </div>
+              </ng-container>
+       </div>
+</div>

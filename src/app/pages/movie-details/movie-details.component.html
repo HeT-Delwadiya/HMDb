@@ -1,0 +1,26 @@
+<ng-container *ngIf="movie">
+       <app-slider [items]="[movie]" [isBanner]="true"></app-slider>
+       <p-tabView>
+              <p-tabPanel header="Overview">
+                     <app-item-overview [movie]="movie"></app-item-overview>
+              </p-tabPanel>
+              <p-tabPanel header="Trailers">
+                     <div class="container">
+                            <div class="grid">
+                                   <ng-container *ngFor="let movieVideo of movieVideos">
+                                          <div class="col-12 md:col-4 lg:col-4">
+                                                 <app-embeded-video [key]="movieVideo.key" [site]="movieVideo.site"></app-embeded-video>
+                                          </div>
+                                   </ng-container>
+                            </div>
+                     </div>
+              </p-tabPanel>
+              <p-tabPanel header="Gallery">
+                     <app-item-gallery [itemGallery]="movieImages?.backdrops"></app-item-gallery>
+              </p-tabPanel>
+              <p-tabPanel header="Cast">
+                     <app-item-cast [cast]="movieCredits"></app-item-cast>
+              </p-tabPanel>
+       </p-tabView>
+       <app-card-list [items]="similarMovies" [title]="'Similar Movies'"></app-card-list>
+</ng-container>

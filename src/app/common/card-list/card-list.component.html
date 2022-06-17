@@ -1,0 +1,8 @@
+<div class="container mb-5">
+       <div class="dark-bg text-white px-2 my-5 text-center rounded-3"><span class="fs-2 text-center">{{ title }}</span></div>
+       <div class="grid">
+              <div class="col-12 md:col-6 lg:col-3" *ngFor="let item of items">
+                     <app-item-card [itemData]="item" [isTvShow]="isTvShow"></app-item-card>
+              </div>
+       </div>
+</div>

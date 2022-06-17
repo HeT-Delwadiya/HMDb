@@ -1,0 +1,24 @@
+<div class="dark-bg mb-0">
+       <div class="container">
+       <header class="d-flex flex-wrap justify-content-center py-3">
+              <a href="/" class="d-flex align-items-center mb-0 me-md-auto text-dark text-decoration-none">
+                     <span class="fs-2 fw-bold dark-color px-2 light-bg rounded-3">HMDb</span>
+              </a>
+
+              <ul class="nav">
+                     <li class="nav-item" [ngClass]="isActiveTab('/')">
+                            <a routerLink="/" class="nav-link fw-bold" aria-current="page">Home</a>
+                     </li>
+                     <li class="nav-item" [ngClass]="isActiveTab('/movies')">
+                            <a routerLink="/movies" class="nav-link fw-bold">Movies</a>
+                     </li>
+                     <li class="nav-item" [ngClass]="isActiveTab('/tv-shows')">
+                            <a routerLink="/tv-shows" class="nav-link fw-bold">TV Shows</a>
+                     </li>
+                     <li class="nav-item" [ngClass]="isActiveTab('/genres')">
+                            <a routerLink="/genres" class="nav-link fw-bold">Genres</a>
+                     </li>
+              </ul>
+       </header>
+       </div>
+</div>
