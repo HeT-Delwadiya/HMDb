@@ -6,7 +6,7 @@ An IMDB clone which uses themoviesdb's api to get movie/series data. It is build
 
 ## Demo
  
-  * This app is deployed on github pages. Please check it out :smile: https://het-delwadiya.github.io/HMDb/.
+  * This app is deployed on cloud. Please check it out :smile: https://hmdb.hetdelwadiya.dev.
 
 
 ## Install
